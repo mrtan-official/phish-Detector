@@ -6,16 +6,21 @@ os.system('git pull')
 print('Follow my facebook')
 os.system("xdg-open https://www.facebook.com/MrT4N.Official")
 
-# Check korchi eta ki Android (Termux) naki normal Linux
-is_android = 'Android' in platform.version() or 'termux' in sys.prefix
+is_android = 'termux' in sys.prefix or 'Android' in platform.version()
+is_linux_pc = platform.system() == "Linux" and not is_android
 
 if is_android:
     print('\033[1;31m[\x1b[38;5;156m●\033[1;31m]\x1b[38;5;156m Termux Detected (64 Bit)')
     time.sleep(3)
     os.system("clear")
     import detector
-else:
+
+elif is_linux_pc:
     print('\033[1;31m[\x1b[38;5;156m●\033[1;31m]\x1b[38;5;156m Linux PC Detected')
     time.sleep(3)
     os.system("clear")
     import phish_detector
+
+else:
+    # Onno kono OS (Windows/Mac) hole
+    print("Sorry, your device is not supported.")
