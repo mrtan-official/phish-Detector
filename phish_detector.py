@@ -15,6 +15,7 @@ if bit == '64bit':
     time.sleep(3)
     os.system("clear")
     import detector
+    import phish_detector
     
 elif os_type == 'Linux':
     print('\033[1;31m[\x1b[38;5;156m●\033[1;31m]\x1b[38;5;156m Linux Device Detected')
