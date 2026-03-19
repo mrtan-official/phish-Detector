@@ -22,5 +22,4 @@ elif is_linux_pc:
     import phish_detector
 
 else:
-    # Onno kono OS (Windows/Mac) hole
     print("Sorry, your device is not supported.")
