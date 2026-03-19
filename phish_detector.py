@@ -4,6 +4,7 @@ print('\n\033[1;31m[\x1b[38;5;156m●\033[1;31m]\x1b[38;5;156m Checking For Upda
 os.system('git pull')
 
 print('Follow my facebook')
+time.sleep(4)
 os.system("xdg-open https://www.facebook.com/MrT4N.Official")
 
 is_android = 'termux' in sys.prefix or 'Android' in platform.version()
@@ -16,7 +17,7 @@ if is_android:
     import detector
 
 elif is_linux_pc:
-    print('\033[1;31m[\x1b[38;5;156m●\033[1;31m]\x1b[38;5;156m Linux PC Detected')
+    print('\033[1;31m[\x1b[38;5;156m●\033[1;31m]\x1b[38;5;156m Linux Detected')
     time.sleep(3)
     os.system("clear")
     import phish_detector
