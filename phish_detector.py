@@ -6,22 +6,16 @@ os.system('git pull')
 print('Follow my facebook')
 os.system("xdg-open https://www.facebook.com/MrT4N.Official")
 
-# Architecture ebong OS check kora
-bit = platform.architecture()[0]
-os_type = platform.system()
+# Check korchi eta ki Android (Termux) naki normal Linux
+is_android = 'Android' in platform.version() or 'termux' in sys.prefix
 
-if bit == '64bit':
-    print('\033[1;31m[\x1b[38;5;156m●\033[1;31m]\x1b[38;5;156m You are 64 Bit user')
+if is_android:
+    print('\033[1;31m[\x1b[38;5;156m●\033[1;31m]\x1b[38;5;156m Termux Detected (64 Bit)')
     time.sleep(3)
     os.system("clear")
     import detector
-    import phish_detector
-    
-elif os_type == 'Linux':
-    print('\033[1;31m[\x1b[38;5;156m●\033[1;31m]\x1b[38;5;156m Linux Device Detected')
+else:
+    print('\033[1;31m[\x1b[38;5;156m●\033[1;31m]\x1b[38;5;156m Linux PC Detected')
     time.sleep(3)
     os.system("clear")
     import phish_detector
-
-else:
-    print("Sorry, unsupported system.")
